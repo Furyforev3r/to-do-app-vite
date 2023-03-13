@@ -10,6 +10,11 @@ function App() {
   function RemoveFromList(id: number) {
     setItems(items.filter((i) => i.id !== id))
   }
+  function AddToList(item: string) {
+    if (item.trim()) {
+      setItems([...items, {text: item, id: items.length+1}])
+    }
+  }
   
   return (
     <>
@@ -19,8 +24,8 @@ function App() {
     <main>
       <form className='submit'>
         <label>
-          <input type='text' className='textin' placeholder='Buy a milk...' onChange={(e) => {setInputtext(e.target.value)}} onSubmit={(e) => {e.preventDefault()}}/>
-          <input type='submit' value={'Add task...'} onClick={(e) => {e.preventDefault(), setItems([...items, {text: inputtext, id: items.length+1}])}}/>
+          <input type='text' className='textin' placeholder='Buy a milk...' onChange={(e) => {setInputtext(e.target.value)}} onSubmit={(e) => {e.preventDefault(), AddToList(inputtext)}}/>
+          <input type='submit' value={'Add task...'} onClick={(e) => {e.preventDefault(), AddToList(inputtext)}}/>
         </label>
       </form>
       <div>
