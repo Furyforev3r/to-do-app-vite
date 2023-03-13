@@ -10,6 +10,7 @@ function App() {
   function RemoveFromList(id: number) {
     setItems(items.filter((i) => i.id !== id))
   }
+  
   function AddToList(item: string) {
     if (item.trim()) {
       setItems([...items, {text: item, id: items.length+1}])
