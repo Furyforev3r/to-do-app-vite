@@ -1,4 +1,4 @@
-> # :paintbrush: To do App - ReactJs Typescript
+> # :paintbrush: | To do App - ReactJS Typescript
 **A to-do list app made in Vite using ReactJS!**
 # 📥 Installation
 **Clone the repository:**
