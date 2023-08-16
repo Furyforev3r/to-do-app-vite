@@ -19,36 +19,36 @@ function App() {
   
   return (
     <>
-    <header>
-      <h1>To do App</h1>
-    </header>
-    <main>
-      <form className='submit'>
-        <label>
-          <input type='text' className='textin' placeholder='Buy a milk...' onChange={(e) => {setInputtext(e.target.value)}} onSubmit={(e) => {e.preventDefault(), AddToList(inputtext)}}/>
-          <input type='submit' value={'Add task...'} onClick={(e) => {e.preventDefault(), AddToList(inputtext)}}/>
-        </label>
-      </form>
-      <div>
-        {items.map((item) => {
-          return (
-            <div className='item'>
-              <form>
-                <label className='checkboxlabel'>
-                  <input type='checkbox'/>
-                  <span className='checkmark'></span>
-                </label>
-              </form>
-              <p><i>{item.id}. </i>{item.text}</p>
-              <FontAwesomeIcon icon={faTrash} className='trash' onClick={() => RemoveFromList(item.id)}/>
-            </div>
-          )
-        })}
-      </div>
-    </main>
-    <footer>
-      <h2>Github Projects</h2>
-    </footer>
+      <header>
+        <h1>To do App</h1>
+      </header>
+      <main>
+        <form className='submit'>
+          <label>
+            <input type='text' className='textin' placeholder='Buy a milk...' onChange={(e) => {setInputtext(e.target.value)}} onSubmit={(e) => {e.preventDefault(), AddToList(inputtext)}}/>
+            <input type='submit' value='Add task...' onClick={(e) => {e.preventDefault(), AddToList(inputtext)}}/>
+          </label>
+        </form>
+        <div>
+          {items.map((item) => {
+            return (
+              <div className='item'>
+                <form>
+                  <label className='checkboxlabel'>
+                    <input type='checkbox'/>
+                    <span className='checkmark'></span>
+                  </label>
+                </form>
+                <p><i>{item.id}. </i>{item.text}</p>
+                <FontAwesomeIcon icon={faTrash} className='trash' onClick={() => RemoveFromList(item.id)}/>
+              </div>
+            )
+          })}
+        </div>
+      </main>
+      <footer>
+        <h2>Github Projects</h2>
+      </footer>
     </>
   )
 }

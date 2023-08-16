@@ -2,27 +2,26 @@
     --blue: #1890ff;
     --color-light-gray: #f5f5f5;
     --color-gray: #d9d9d9;
+    --alert-color: #f5222d;
 }
 
 header {
-    border-bottom: 1px solid var(--color-light-gray);
+    border-bottom: 0.1rem solid var(--color-light-gray);
 }
 
-main {
-    margin-top: 15px;
-}
 
-.submit {
+.submit label {
     display: flex;
     flex-direction: row;
-    gap: 10px;
-    border: 1px solid var(--color-gray);
-    padding: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    border: 0.1rem solid var(--color-gray);
+    padding: 1.2rem;
 }
 
 .submit input[type="text"] {
-    width: 83vw;
-    padding: 10px;
+    padding: 0.8rem;
     border: none;
 }
 
@@ -31,28 +30,33 @@ main {
 }
 
 .submit input[type="submit"] {
-    padding: 10px;
+    padding: 1rem;
     border: none;
     background-color: var(--blue);
-    border-radius: 5px;
+    border-radius: 0.3rem;
     color: white;
     cursor: pointer;
 }
 
+.trash {
+    transition: color 0.3s;
+}
+
 .trash:hover {
-    color: #f5222d;
+    color: var(--alert-color);
     cursor: pointer;
+    transition: color 0.3s;
 } 
 
 .item {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 10px;
-    gap: 10px;
-    border: 1px solid var(--color-gray);
+    padding: 1rem;
+    gap: 1rem;
+    border: 0.1rem solid var(--color-gray);
     border-radius: 3px;
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 
 .item i {
@@ -70,6 +74,7 @@ input[type="checkbox"] {
 }
 
 .checkmark {
+    cursor: pointer;
     position: relative;
     display: inline-block;
     width: 20px;
@@ -103,6 +108,5 @@ input[type="checkbox"]:checked + .checkmark::before {
 footer {
     display: grid;
     place-items: center;
-    margin-top: 15px;
-    border-top: 1px solid var(--color-light-gray);
+    border-top: 0.1rem solid var(--color-light-gray);
 }
