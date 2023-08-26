@@ -1,4 +1,4 @@
-# :paintbrush: | To do App - Vite
+# :paintbrush: | To-do App - Vite
 **A to-do list app made in Vite using ReactJS!**
 # 📥 Installation
 **Clone the repository:**
